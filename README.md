@@ -103,9 +103,19 @@ Although this application does not expose a RESTful API, it can be tested manual
 
 ---
 
-## API Usage
+## Deployment
 
-This application does not use third-party APIs for fetching sentiment or news data. It fetches news articles directly from Yahoo Finance using web scraping techniques, then performs local sentiment analysis and summarization using pre-trained models.
+This web application has been deployed on [Hugging Face Spaces](https://huggingface.co/spaces/your-username/news-sentiment-analysis) for easy access and demonstration. You can visit the following link to interact with the live application:
+
+[News Sentiment Analysis Web App](https://huggingface.co/spaces/your-username/news-sentiment-analysis)
+
+### Deployment Process
+
+The application was deployed on Hugging Face Spaces using the following steps:
+
+1. **Prepare the Environment**: Set up a `requirements.txt` file to include all necessary dependencies like Gradio, transformers, and sentiment analysis models.
+2. **Push to Hugging Face**: Push the code to the Hugging Face repository by connecting it with your Hugging Face account.
+3. **Run on Hugging Face Spaces**: The Hugging Face platform automatically handles the environment and allows easy deployment with minimal configuration.
 
 ---
 
@@ -128,7 +138,5 @@ This application does not use third-party APIs for fetching sentiment or news da
 This web application provides an end-to-end solution for sentiment analysis of news articles related to a company. It uses advanced NLP techniques to summarize, analyze, and generate audio-based insights, helping users gauge market sentiment and make informed decisions.
 
 For further development, we may add more features like integrating real-time stock price data, enhancing sentiment analysis with additional models, or incorporating more external news sources.
-
----
 
 

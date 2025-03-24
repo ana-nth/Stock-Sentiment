@@ -1,0 +1,16 @@
+requests
+beautifulsoup4
+transformers
+vaderSentiment
+spacy
+spacy
+gTTS
+gradio
+torch
+numpy
+pandas
+scikit-learn
+fastapi
+uvicorn
+accelerate>=0.26.0
+googletrans

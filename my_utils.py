@@ -179,3 +179,11 @@ def final_output(company_ticker):
         "Comparative Sentiment Score": sentiment_scores,
         "Final Sentiment Analysis": final_decision
     }
+
+def generate_audio(text, filename="output.mp3"):
+    """Generate Hindi text-to-speech audio."""
+    translator = Translator()
+    translated_text = translator.translate(text, src="en", dest="hi").text
+    tts = gTTS(text=text, lang="hi")
+    tts.save(filename)
+    return filename

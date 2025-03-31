@@ -66,24 +66,40 @@ def extract_article_details(url):
 
 
 def get_yahoo_news(company):
-    """Fetches Yahoo Finance news article links."""
-    base_url = f"https://finance.yahoo.com/quote/{company}/news?p={company}"
+    # Step 1: Format the company name
+    company = company.strip().replace(" ", "+")
+
+    # Step 2: Create the URL for the car company
+    URL = f"https://indianexpress.com/about/{company}/"
+
+    # Step 3: Send a request
     headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(URL, headers=headers)
 
-    try:
-        response = requests.get(base_url, headers=headers)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
-
-        links = [
-            f"https://finance.yahoo.com{a['href']}" if a['href'].startswith("/") else a['href']
-            for a in soup.find_all("a", href=True)
-            if "/news/" in a["href"] and "finance.yahoo.com" in a["href"] and re.search(r"\d{8}", a["href"])
-        ]
-
-        return list(set(links))[:10]  # Limit to 10 links
-    except requests.exceptions.RequestException:
+    # Step 4: Check if the response is successful
+    if response.status_code != 200:
+        print("Failed to retrieve the page.")
         return []
+
+    # Step 5: Parse the HTML content with BeautifulSoup
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Step 6: Extract headlines and links
+    articles = soup.find_all("h3")
+
+    # Step 7: Collect the first 10 links
+    links = []
+    for article in articles[:10]:  # Get the first 10 articles
+        link_tag = article.find("a", href=True)
+        if link_tag:
+            link = link_tag["href"]
+            # Make the link absolute if it's relative
+            if not link.startswith("http"):
+                link = "https://indianexpress.com" + link
+            links.append(link)
+
+    return links
+
 
 
 def sentiment_dist(articles):

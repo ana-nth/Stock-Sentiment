@@ -129,19 +129,6 @@ Although this application does not expose a RESTful API, it can be tested manual
 
 ---
 
-## Deployment
-
-This web application has been deployed on [Hugging Face Spaces](https://huggingface.co/spaces/Anaaanthh/AnanthkrishnaDS) for easy access and demonstration. 
-
-### Deployment Process
-
-The application was deployed on Hugging Face Spaces using the following steps:
-
-1. **Prepare the Environment**: Set up a `requirements.txt` file to include all necessary dependencies like Gradio, transformers, and sentiment analysis models.
-2. **Push to Hugging Face**: Push the code to the Hugging Face repository by connecting it with your Hugging Face account.
-3. **Run on Hugging Face Spaces**: The Hugging Face platform automatically handles the environment and allows easy deployment with minimal configuration.
-
----
 
 ## Assumptions & Limitations
 

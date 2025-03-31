@@ -2,7 +2,6 @@
 
 This web application analyzes the sentiment of the latest news articles about a company and generates an audio summary based on the analysis. The system fetches relevant news articles, performs sentiment analysis, summarizes the articles, compares the coverage, and provides the final sentiment of the company. Additionally, it produces an audio summary of the sentiment analysis.
 
-## Problem Statement
 
 # Objective
 Develop a web-based application that extracts key details from multiple news articles related

@@ -119,7 +119,7 @@ The application does not use external third-party APIs but is designed to intera
 Although this application does not expose a RESTful API, it can be tested manually via the Gradio interface.
 
 1. **Access the interface**:
-    - Open the browser and navigate to `http://localhost:7860`.
+    - Open the browser and navigate to `https://huggingface.co/spaces/Anaaanthh/AnanthkrishnaDS`.
     - Enter the company name in the text input field.
     - Click "Analyze Sentiment."
 

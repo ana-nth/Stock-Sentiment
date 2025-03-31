@@ -105,9 +105,7 @@ Although this application does not expose a RESTful API, it can be tested manual
 
 ## Deployment
 
-This web application has been deployed on [Hugging Face Spaces](https://huggingface.co/spaces/your-username/news-sentiment-analysis) for easy access and demonstration. You can visit the following link to interact with the live application:
-
-[News Sentiment Analysis Web App](https://huggingface.co/spaces/your-username/news-sentiment-analysis)
+This web application has been deployed on [Hugging Face Spaces](https://huggingface.co/spaces/Anaaanthh/AnanthkrishnaDS) for easy access and demonstration. 
 
 ### Deployment Process
 
